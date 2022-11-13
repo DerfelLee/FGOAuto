@@ -1,8 +1,9 @@
-import cv2
-import pyautogui
-import numpy as np
 import random
 import time
+import cv2
+import numpy as np
+import pyautogui
+
 
 # 基本信息
 def BasicInf(Servants):
@@ -115,4 +116,28 @@ def ChangeServant(S1, S2, S):
     x = pyautogui.locateCenterOnScreen(changeconfirm, confidence=0.8)
     pyautogui.click(x); time.sleep(8)
 
+    return
+
+
+# 重新选关
+def RepeatBattle(S_img):
+    time.sleep(10)
+    AfterB = 'images/Panel/AfterBattle.png'
+    Press(AfterB); time.sleep(3)
+    Press(AfterB); time.sleep(3)
+    Next = 'images/Panel/NextStep.png'
+    Press(Next); time.sleep(3)
+    StartA = 'images/Panel/StartAgain.png'
+    Press(StartA); time.sleep(5)
+    return
+
+
+# 选择助战
+def ChooseAssistant(servant):
+    S_img1 = 'images/Servants/' + servant + '/Assistant1.png'
+    # S_img2 = 'images/Servants/' + servant + '/Assistant2.png'
+    S_img3 = 'images/Servants/' + servant + '/Assistant3.png'
+    Press(S_img1); time.sleep(2)
+    # Press(S_img2); time.sleep(2)
+    Press(S_img3); time.sleep(2)
     return

@@ -9,24 +9,24 @@ Servants = ['Ishtar', 'C_Author', 'C_Author']
 
 
 # Basic panels
-Atk = 'images\Panel\Atk.png'
-skills = [[0]*3 for i in range(3)]
-S_img = [[0] for i in range(3)]
-S_np = [[0] for i in range(3)]
+# Atk = 'images\Panel\Atk.png'
+# skills = [[0]*3 for i in range(3)]
+# S_img = [[0] for i in range(3)]
+# S_np = [[0] for i in range(3)]
 
-for i in range(3):
-    for j in range(3):
-        skills[i][j] = 'images/Servants/'+Servants[i]+'/Skill'+str(j+1)+'.png'
+# for i in range(3):
+#     for j in range(3):
+#         skills[i][j] = 'images/Servants/'+Servants[i]+'/Skill'+str(j+1)+'.png'
 
-for i in range(3):
-    S_img[i] = 'images/Servants/'+Servants[i]+'/Battle.png'
-    S_np[i] = 'images/Servants/'+Servants[i]+'/NP.png'
+# for i in range(3):
+#     S_img[i] = 'images/Servants/'+Servants[i]+'/Battle.png'
+#     S_np[i] = 'images/Servants/'+Servants[i]+'/NP.png'
 
 time.sleep(10)
 print('Battle Start')
 
-S = fgoauto.FindServant(Servants[0])
-C = fgoauto.FindCards(S)
+# S = fgoauto.FindServant(Servants[0])
+# C = fgoauto.FindCards(S)
 # testregion1 = pyautogui.screenshot(region=S[0])
 # testregion2 = pyautogui.screenshot(region=S[1])
 # testregion3 = pyautogui.screenshot(region=S[2])
@@ -51,7 +51,9 @@ C = fgoauto.FindCards(S)
 
 # fgoauto.Press(S_np[0])
 
-fgoauto.ChangeServant(3, 4, S)
+# fgoauto.ChangeServant(3, 4, S)
+
+fgoauto.ChooseAssistant('C_Author')
 
 
 
